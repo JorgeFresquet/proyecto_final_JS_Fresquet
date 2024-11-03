@@ -1,0 +1,20 @@
+[
+        { "id": 1, "nombreObra": "Obra 1", "nombreAutor": "juan", "categoria": "escultura", "precio": 1000, "img": "./image/obra_1.jpg" },
+        { "id": 2, "nombreObra": "Obra 2", "nombreAutor": "juan", "categoria": "pintura", "precio": 1000, "img": "./image/obra_2.jpg" },
+        { "id": 3, "nombreObra": "Obra 3", "nombreAutor": "jorge", "categoria": "escultura", "precio":5000, "img": "./image/obra_3.jpg" },
+        { "id": 4, "nombreObra": "Obra 4", "nombreAutor": "jorge", "categoria": "pintura", "precio": 5000, "img": "./image/obra_4.jpg" },
+        { "id": 5, "nombreObra": "Obra 5", "nombreAutor": "jorge", "categoria": "pintura", "precio": 10000, "img": "./image/obra_5.jpg" },
+        { "id": 6, "nombreObra": "Obra 6", "nombreAutor": "luis", "categoria": "arte urbano", "precio": 10000, "img": "./image/obra_6.jpg" },
+        { "id": 7, "nombreObra": "Obras 7", "nombreAutor": "luis", "categoria": "pintura", "precio": 15000, "img": "./image/obra_7.jpg" },
+        { "id": 8, "nombreObra": "Obra 8", "nombreAutor": "luis", "categoria": "grafitti", "precio": 15000, "img": "./image/obra_8.jpg" },
+        { "id": 9, "nombreObra": "Obra 9", "nombreAutor": "juan", "categoria": "escultura", "precio": 1000, "img": "./image/obra_1.jpg" },
+        { "id": 10, "nombreObra": "Obra 10", "nombreAutor": "juan", "categoria": "pintura", "precio": 1000, "img": "./image/obra_2.jpg" },
+        { "id": 11, "nombreObra": "Obra 11", "nombreAutor": "jorge", "categoria": "escultura", "precio":5000, "img": "./image/obra_3.jpg" },
+        { "id": 12, "nombreObra": "Obra 12", "nombreAutor": "jorge", "categoria": "pintura", "precio": 5000, "img": "./image/obra_4.jpg" },
+        { "id": 13, "nombreObra": "Obra 13", "nombreAutor": "jorge", "categoria": "pintura", "precio": 10000, "img": "./image/obra_5.jpg" },
+        { "id": 14, "nombreObra": "Obra 14", "nombreAutor": "luis", "categoria": "arte urbano", "precio": 10000, "img": "./image/obra_6.jpg" },
+        { "id": 15, "nombreObra": "Obras 15", "nombreAutor": "luis", "categoria": "pintura", "precio": 15000, "img": "./image/obra_7.jpg" },
+        { "id": 16, "nombreObra": "Obra 16", "nombreAutor": "luis", "categoria": "grafitti", "precio": 15000, "img": "./image/obra_8.jpg" }
+
+      
+    ]
