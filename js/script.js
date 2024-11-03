@@ -1,15 +1,15 @@
 const contenedorProductos = document.getElementById("contenedor-productos");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let productos = []; // Declarar productos como variable global
+let productos = []; 
 
 // Cargar productos al iniciar
 const cargarProductos = async () => {
     try {
         const response = await fetch("./js/productos.json");
-        productos = await response.json(); // Asignar datos a la variable global `productos`
-        renderizarProductos(productos); // Mostrar todos los productos inicialmente
-        cargarCategorias(productos); // Cargar categorías en el dropdown
-        cargarAutores(productos); // Cargar autores en el dropdown
+        productos = await response.json(); 
+        renderizarProductos(productos); 
+        cargarCategorias(productos); 
+        cargarAutores(productos); 
     } catch (error) {
         console.error("Error al cargar productos: ", error);
     }
@@ -19,7 +19,7 @@ const cargarProductos = async () => {
 const cargarCategorias = (productos) => {
     const filtroCategoria = document.getElementById('filtro-categoria');
     const categorias = [...new Set(productos.map(producto => producto.categoria.toLowerCase()))];
-    filtroCategoria.innerHTML = `<option value="">Categoría:</option>`; // Opción por defecto
+    filtroCategoria.innerHTML = `<option value="">Categoría:</option>`; 
 
     categorias.forEach(categoria => {
         const option = document.createElement("option");
@@ -34,11 +34,11 @@ const cargarAutores = (productos) => {
     const filtroAutor = document.getElementById('filtro-autor');
     if (!filtroAutor) {
         console.error("El elemento 'filtro-autor' no se encuentra en el DOM.");
-        return; // Salir de la función si el elemento no existe
+        return; 
     }
 
-    const autores = [...new Set(productos.map(producto => producto.nombreAutor.toLowerCase()))]; // Obtener autores únicos
-    filtroAutor.innerHTML = `<option  value="">Autor:</option>`; // Opción por defecto
+    const autores = [...new Set(productos.map(producto => producto.nombreAutor.toLowerCase()))]; 
+    filtroAutor.innerHTML = `<option  value="">Autor:</option>`; 
 
     autores.forEach(autor => {
         const option = document.createElement("option");
@@ -50,11 +50,11 @@ const cargarAutores = (productos) => {
 
 // Función para renderizar los productos
 const renderizarProductos = (array) => {
-    contenedorProductos.innerHTML = ''; // Limpiar el contenedor antes de renderizar
+    contenedorProductos.innerHTML = ''; 
 
     array.forEach((elm) => {
         const div = document.createElement("div");
-        div.classList.add("producto", "col-md-4"); // Añadido col-md-4 para el diseño de Bootstrap
+        div.classList.add("producto", "col-md-4"); 
         div.innerHTML = `
             <img src="${elm.img}" alt="${elm.nombreObra}" class="img-fluid">
             <h3 class="nombreObra">${elm.nombreObra}</h3>
@@ -122,21 +122,21 @@ function quitarFiltros() {
     const filtroCategoria = document.getElementById('filtro-categoria');
 
     if (filtroNombre) {
-        filtroNombre.value = ''; // Limpiar el filtro de nombre
+        filtroNombre.value = ''; 
     }
     if (filtroAutor) {
-        filtroAutor.value = ''; // Limpiar el filtro de autor
+        filtroAutor.value = ''; 
     }
     if (filtroCategoria) {
-        filtroCategoria.value = ''; // Limpiar el filtro de categoría
+        filtroCategoria.value = ''; 
     }
 
-    renderizarProductos(productos); // Mostrar todos los productos
+    renderizarProductos(productos); 
 }
 
 // Event listeners para los botones de filtros
-document.getElementById('aplicar-filtros').addEventListener('click', filtrarProductos); // Aplicar filtros al hacer clic
-document.getElementById('quitar-filtros').addEventListener('click', quitarFiltros); // Quitar filtros al hacer clic
+document.getElementById('aplicar-filtros').addEventListener('click', filtrarProductos); 
+document.getElementById('quitar-filtros').addEventListener('click', quitarFiltros); 
 
 // Cargar los productos al iniciar y configurar botones de filtro
 document.addEventListener('DOMContentLoaded', function () {
@@ -151,19 +151,16 @@ document.addEventListener('DOMContentLoaded', function () {
     quitarFiltrosBtn.style.display = "none";
 
     aplicarFiltrosBtn.addEventListener("click", function () {
-        // Verificamos si algún filtro ha sido seleccionado
+        
         if (filtroAutor.value || filtroCategoria.value) {
-            // Mostrar el botón de "Quitar filtros" si se ha aplicado un filtro
             quitarFiltrosBtn.style.display = "inline-block";
         }
     });
 
     quitarFiltrosBtn.addEventListener("click", function () {
-        // Reiniciamos los filtros
+
         filtroAutor.selectedIndex = 0;
         filtroCategoria.selectedIndex = 0;
-
-        // Ocultamos el botón de "Quitar filtros"
         quitarFiltrosBtn.style.display = "none";
     });
 });

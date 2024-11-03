@@ -1,8 +1,8 @@
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 const totalCarrito = document.getElementById("total-carrito");
-const contenedorTotal = document.querySelector(".contenedoTotal"); // Selecciona el contenedor del total
-const finalizarCompra = document.querySelector(".finalizarCompra"); // Selecciona el contenedor del botón de compra
-const contenedoItems = document.querySelector(".contenedoItems"); // Asegúrate que el nombre de clase sea correcto
+const contenedorTotal = document.querySelector(".contenedoTotal"); 
+const finalizarCompra = document.querySelector(".finalizarCompra"); 
+const contenedoItems = document.querySelector(".contenedoItems"); 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // Oculta el contenedor del total y el botón de finalizar compra si el carrito está vacío
@@ -60,7 +60,7 @@ const actualizarCarrito = () => {
             
             //resta 
             document.getElementById(`restar${elm.id}`).addEventListener("click", () => {
-                if (elm.cantidad > 1) { // Asegura que la cantidad no sea menor a 1
+                if (elm.cantidad > 1) { 
                     elm.cantidad--;
                     guardarCarrito();
                     actualizarCarrito();
